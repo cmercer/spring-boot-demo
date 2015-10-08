@@ -9,6 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -31,9 +32,16 @@ import org.joda.time.LocalDate;
 @Entity
 @Table(name = "AUTHOR")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
-@NamedQuery(name = "Author.findByBirthDateBetweenDates",
-    query = "select a from com.harpoontech.demo.domain.Author a where a.birthDate between :startDate and :endDate"
-)
+@NamedQueries({
+    @NamedQuery(
+        name = "Author.findByBirthDateBetweenDates",
+        query = "select a from com.harpoontech.demo.domain.Author a where a.birthDate between :startDate and :endDate"
+    ),
+    @NamedQuery(
+        name = "Author.findByBirthDateBetweenDates.count",
+        query = "select count(distinct a) from com.harpoontech.demo.domain.Author a where a.birthDate between :startDate and :endDate"
+    )
+})
 public class Author implements Serializable {
 
     @Id
