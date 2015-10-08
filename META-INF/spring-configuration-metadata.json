@@ -1,0 +1,29 @@
+{
+    "groups": [
+        {
+            "name": "harpoontech",
+            "type": "com.harpoontech.demo.config.HarpoonTechProperties",
+            "sourceType": "com.harpoontech.demo.config.HarpoonTechProperties"
+        }
+    ],
+    "properties": [
+        {
+            "name": "harpoontech.company-name",
+            "type": "java.lang.String",
+            "description": "The name of the company",
+            "sourceType": "com.harpoontech.demo.config.HarpoonTechProperties"
+        },
+        {
+            "name": "harpoontech.port",
+            "type": "java.lang.Integer",
+            "description": "Port to serve files from",
+            "sourceType": "com.harpoontech.demo.config.HarpoonTechProperties"
+        },
+        {
+            "name": "harpoontech.url",
+            "type": "java.net.URL",
+            "sourceType": "com.harpoontech.demo.config.HarpoonTechProperties",
+            "defaultValue": "http://www.google.com"
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://xmlns.jcp.org/xml/ns/persistence/orm"
+                 version="2.1">
+
+    <named-query name="Author.findByBirthDateBetweenDates">
+        <query>
+
+            select a from Author a where a.birthDate between :startDate and :endDate
+
+
+        </query>
+    </named-query>
+</entity-mappings>
