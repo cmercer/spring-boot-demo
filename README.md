@@ -1,4 +1,4 @@
-# Developing bootdemo
+# Developing spring-boot-demo
 
 bootdemo was generated using JHipster, you can find documentation and help at [JHipster][].
 
